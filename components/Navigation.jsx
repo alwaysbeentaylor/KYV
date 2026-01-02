@@ -28,8 +28,8 @@ export default function Navigation() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center overflow-hidden">
-                            <img src="/kyv_logo_smooth.png" alt="Know Your VIP Logo" className="w-8 h-8 object-contain" />
+                        <div className="w-10 h-10 flex items-center justify-center">
+                            <img src="/kyv_logo_smooth.png" alt="Know Your VIP Logo" className="w-10 h-10 object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <span className="font-heading text-lg font-bold text-white leading-none">
