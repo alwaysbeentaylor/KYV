@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 export default function Navigation() {
     const [scrolled, setScrolled] = useState(false);
@@ -14,10 +15,10 @@ export default function Navigation() {
     }, []);
 
     const navLinks = [
-        { href: '#how-it-works', label: 'VIP Detection' },
-        { href: '#features', label: 'Intelligence' },
+        { href: '#problem', label: 'Problem' },
+        { href: '#how-it-works', label: 'How It Works' },
         { href: '#pricing', label: 'Pricing' },
-        { href: '#faq', label: 'FAQ' },
+        { href: '#contact', label: 'Contact' },
     ];
 
     return (
@@ -53,26 +54,30 @@ export default function Navigation() {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* CTA Button + Language Switcher */}
                     <div className="hidden md:flex items-center gap-4">
+                        <LanguageSwitcher />
                         <a href="#contact" className="btn btn-primary">
-                            Book Demo
+                            Request Demo
                         </a>
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    >
-                        <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            {mobileMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            )}
-                        </svg>
-                    </button>
+                    {/* Mobile: Language Switcher + Menu Button */}
+                    <div className="md:hidden flex items-center gap-2">
+                        <LanguageSwitcher />
+                        <button
+                            className="p-2"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        >
+                            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                {mobileMenuOpen ? (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                ) : (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                )}
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Menu */}
@@ -89,7 +94,7 @@ export default function Navigation() {
                             </a>
                         ))}
                         <a href="#contact" className="btn btn-primary w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
-                            Book Demo
+                            Request Demo
                         </a>
                     </div>
                 )}

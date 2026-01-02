@@ -1,13 +1,14 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/sections/Hero';
 import Problem from '@/components/sections/Problem';
+import Solution from '@/components/sections/Solution';
 import HowItWorks from '@/components/sections/HowItWorks';
-import Features from '@/components/sections/Features';
 import Benefits from '@/components/sections/Benefits';
+import TargetAudience from '@/components/sections/TargetAudience';
 import Pricing from '@/components/sections/Pricing';
-import Privacy from '@/components/sections/Privacy';
+import Compliance from '@/components/sections/Compliance';
+import FinalCTA from '@/components/sections/FinalCTA';
 
-import About from '@/components/sections/About';
 import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
@@ -20,13 +21,14 @@ export default function Home() {
             <main>
                 <Hero />
                 <Problem />
+                <Solution />
                 <HowItWorks />
-                <Features />
                 <Benefits />
+                <TargetAudience />
                 <Pricing />
-                <Privacy />
+                <Compliance />
+                <FinalCTA />
 
-                <About />
                 <FAQ />
                 <Contact />
             </main>

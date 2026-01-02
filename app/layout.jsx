@@ -1,22 +1,23 @@
 import "./globals.css";
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 export const metadata = {
-    title: "Know Your VIP | Identify High-Rollers, CEOs & Influencers Before Check-In",
-    description: "Automated VIP detection for luxury hotels, casinos, and premium hospitality. Know net worth, social influence & service preferences in seconds. GDPR-compliant guest intelligence.",
-    keywords: "VIP guest intelligence, hotel VIP detection, casino whale tracking, luxury hospitality software, guest profiling, net worth estimation, high-roller identification, premium hospitality technology",
+    title: "KnowYourVIP | Pre-Arrival Intelligence Platform voor Premium Hospitality",
+    description: "Stop met gokken wie je gast is. KnowYourVIP analyseert publieke data voor hotels die geen verrassingen willen aan de front desk. GDPR-compliant intelligence platform.",
+    keywords: "pre-arrival intelligence, hotel guest intelligence, VIP detection, premium hospitality, guest profiling, GDPR-compliant, hotel technology, guest scoring",
     authors: [{ name: "SKYE Unlimited" }],
     openGraph: {
-        title: "Know Your VIP | Identify High-Rollers, CEOs & Influencers",
-        description: "Automated VIP detection from booking data. Know net worth, social influence, and service preferences before they arrive. Built for premium hospitality.",
+        title: "KnowYourVIP | Pre-Arrival Intelligence Platform",
+        description: "Weet wie waardevol is, wie invloed heeft, en wie extra aandacht vraagt — vóór check-in. Gebouwd voor premium hospitality.",
         type: "website",
-        locale: "en_US",
+        locale: "nl_NL",
         url: "https://knowyourvip.com",
-        siteName: "Know Your VIP",
+        siteName: "KnowYourVIP",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Know Your VIP | Identify High-Rollers Before Check-In",
-        description: "Automated VIP detection for luxury hotels & casinos. Know net worth, social influence & preferences in seconds.",
+        title: "KnowYourVIP | Pre-Arrival Intelligence Platform",
+        description: "Stop met gokken wie je gast is. Weet het vóór aankomst. Gebouwd voor premium hospitality.",
     },
     robots: {
         index: true,
@@ -33,7 +34,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en">
+        <html lang="nl">
             <head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -41,7 +42,9 @@ export default function RootLayout({ children }) {
                 <link rel="icon" href="/kyv_logo_smooth.png" />
             </head>
             <body className="antialiased">
-                {children}
+                <LanguageProvider>
+                    {children}
+                </LanguageProvider>
             </body>
         </html>
     );
