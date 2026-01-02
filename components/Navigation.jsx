@@ -14,10 +14,10 @@ export default function Navigation() {
     }, []);
 
     const navLinks = [
-        { href: '#how-it-works', label: 'VIP Detectie' },
-        { href: '#features', label: 'Intelligentie' },
-        { href: '#pricing', label: 'Tarieven' },
-        { href: '#faq', label: 'Veelgestelde Vragen' },
+        { href: '#how-it-works', label: 'VIP Detection' },
+        { href: '#features', label: 'Intelligence' },
+        { href: '#pricing', label: 'Pricing' },
+        { href: '#faq', label: 'FAQ' },
     ];
 
     return (
@@ -27,17 +27,15 @@ export default function Navigation() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center">
-                            <svg className="w-6 h-6 text-[#D4AF37]" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#1E3A8A] to-[#2563EB] flex items-center justify-center overflow-hidden">
+                            <img src="/kyv_logo_smooth.png" alt="Know Your VIP Logo" className="w-8 h-8 object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <span className="font-heading text-lg font-bold text-white leading-none">
                                 Know Your <span className="text-[#D4AF37]">VIP</span>
                             </span>
                             <span className="text-[10px] text-gray-500 leading-none mt-0.5">
-                                Gast Intelligentie Platform
+                                Guest Intelligence Platform
                             </span>
                         </div>
                     </a>
@@ -58,7 +56,7 @@ export default function Navigation() {
                     {/* CTA Button */}
                     <div className="hidden md:flex items-center gap-4">
                         <a href="#contact" className="btn btn-primary">
-                            Bekijk Demo
+                            Book Demo
                         </a>
                     </div>
 
@@ -91,7 +89,7 @@ export default function Navigation() {
                             </a>
                         ))}
                         <a href="#contact" className="btn btn-primary w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
-                            Bekijk Demo
+                            Book Demo
                         </a>
                     </div>
                 )}
