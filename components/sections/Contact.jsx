@@ -22,9 +22,9 @@ export default function Contact() {
     return (
         <section className="section" id="contact">
             <div className="container">
-                <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
-                    {/* Left: Form */}
-                    <div>
+                <div className="max-w-2xl mx-auto">
+                    {/* Form */}
+                    <div className="text-center">
                         <span className="badge mb-6">Contact Sales</span>
                         <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
                             Request a{' '}
@@ -163,51 +163,7 @@ export default function Contact() {
                         )}
                     </div>
 
-                    {/* Right: Contact Info */}
-                    <div className="lg:pt-20">
-                        <div className="card-glass p-8 mb-6">
-                            <h3 className="font-semibold text-white mb-4">Prefer to Call?</h3>
-                            <a href="tel:+31201234567" className="flex items-center gap-3 text-[#D4AF37] hover:underline">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                                +31 20 123 4567
-                            </a>
-                            <p className="text-gray-500 text-sm mt-2">
-                                Mon-Fri 9:00 - 17:00 CET
-                            </p>
-                        </div>
 
-                        <div className="card-glass p-8 mb-6">
-                            <h3 className="font-semibold text-white mb-4">Email</h3>
-                            <a href="mailto:develop.json@gmail.com" className="flex items-center gap-3 text-[#D4AF37] hover:underline">
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                develop.json@gmail.com
-                            </a>
-                        </div>
-
-                        {/* Lead Magnet */}
-                        <div className="card p-6 border-[#D4AF37]/30 bg-[#D4AF37]/5">
-                            <div className="flex items-start gap-4">
-                                <div className="p-3 rounded-lg bg-[#D4AF37]/20">
-                                    <svg className="w-6 h-6 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h4 className="font-semibold text-white mb-1">Free Download</h4>
-                                    <p className="text-sm text-gray-400 mb-3">
-                                        10 Ways to Impress VIP Guests (PDF)
-                                    </p>
-                                    <a href="#" className="text-sm font-medium text-[#D4AF37] hover:underline">
-                                        Download Now →
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
