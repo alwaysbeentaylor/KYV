@@ -27,10 +27,7 @@ export default function Navigation() {
             <div className="container">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <a href="#" className="flex items-center gap-3">
-                        <div className="w-10 h-10 flex items-center justify-center">
-                            <img src="/kyv_logo_smooth.png" alt="Know Your VIP Logo" className="w-10 h-10 object-contain" />
-                        </div>
+                    <a href="#" className="flex items-center">
                         <div className="flex flex-col">
                             <span className="font-heading text-lg font-bold text-white leading-none">
                                 Know Your <span className="text-[#D4AF37]">VIP</span>
