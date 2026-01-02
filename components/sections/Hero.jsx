@@ -33,12 +33,11 @@ export default function Hero() {
                         <span className="bg-gradient-to-r from-[#EF4444] via-[#DC2626] to-[#EF4444] bg-clip-text text-transparent">
                             {t.hero.headline2}
                         </span>
-                        <br />
                         <span className="text-white">{t.hero.headline3}</span>
-                        <br />
                         <span className="bg-gradient-to-r from-[#D4AF37] via-[#F4E4B5] to-[#D4AF37] bg-clip-text text-transparent">
                             {t.hero.headline4}
                         </span>
+                        <span className="text-white">{t.hero.headline5}</span>
                     </h1>
 
                     {/* Subtitle */}

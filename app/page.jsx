@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/sections/Hero';
+import Scenarios from '@/components/sections/Scenarios';
 import Problem from '@/components/sections/Problem';
 import Solution from '@/components/sections/Solution';
 import HowItWorks from '@/components/sections/HowItWorks';
@@ -20,6 +21,7 @@ export default function Home() {
             <Navigation />
             <main>
                 <Hero />
+                <Scenarios />
                 <Problem />
                 <Solution />
                 <HowItWorks />
