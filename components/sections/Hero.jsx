@@ -111,7 +111,7 @@ export default function Hero() {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-white text-lg">Sarah Chen</p>
-                                        <p className="text-sm text-gray-400">Arriving Today • Executive Suite</p>
+                                        <p className="text-sm text-gray-400">{t.hero.arrivingToday} • {t.hero.executiveSuite}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2">
@@ -125,19 +125,19 @@ export default function Hero() {
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                                 <div className="text-center p-4 rounded-lg bg-gradient-to-br from-[#1E3A8A]/20 to-[#2563EB]/10 border border-[#1E3A8A]/30">
                                     <p className="text-4xl font-heading font-bold bg-gradient-to-r from-[#D4AF37] to-[#F4E4B5] bg-clip-text text-transparent">9.2</p>
-                                    <p className="text-xs text-gray-400 mt-1 font-medium">VIP Score</p>
+                                    <p className="text-xs text-gray-400 mt-1 font-medium">{t.hero.attentionScoreLabel || 'Attention Score'}</p>
                                 </div>
                                 <div className="text-center p-4 rounded-lg bg-white/5 border border-white/10">
                                     <p className="text-lg font-semibold text-white">CEO</p>
                                     <p className="text-xs text-gray-400 mt-1">TechCorp International</p>
                                 </div>
                                 <div className="text-center p-4 rounded-lg bg-white/5 border border-white/10">
-                                    <p className="text-lg font-semibold text-[#D4AF37]">€15M+</p>
-                                    <p className="text-xs text-gray-400 mt-1">Est. Net Worth</p>
+                                    <p className="text-lg font-semibold text-[#D4AF37]">High</p>
+                                    <p className="text-xs text-gray-400 mt-1">{t.hero.valueIndicator || 'Value Indicator'}</p>
                                 </div>
                                 <div className="text-center p-4 rounded-lg bg-white/5 border border-white/10">
                                     <p className="text-lg font-semibold text-white">45K</p>
-                                    <p className="text-xs text-gray-400 mt-1">LinkedIn Connections</p>
+                                    <p className="text-xs text-gray-400 mt-1">{t.hero.linkedInConnections}</p>
                                 </div>
                             </div>
 
@@ -150,14 +150,18 @@ export default function Hero() {
                                         </svg>
                                     </div>
                                     <div className="flex-1">
-                                        <p className="text-sm font-semibold text-white mb-1">VIP Service Recommendation</p>
+                                        <p className="text-sm font-semibold text-white mb-1">{t.hero.vipServiceRecommendation}</p>
                                         <p className="text-sm text-gray-300 leading-relaxed">
-                                            High-value tech executive with luxury lifestyle indicators. Recommend: Executive suite upgrade,
-                                            personalized welcome amenity, assign dedicated concierge.
+                                            {t.hero.vipRecommendationText}
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
+                            {/* Enterprise-safe disclaimer */}
+                            <p className="text-xs text-gray-500 mt-4 text-center italic">
+                                {t.hero.dataDisclaimer}
+                            </p>
                         </div>
                     </div>
                 </div>

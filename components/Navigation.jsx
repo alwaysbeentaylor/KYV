@@ -1,10 +1,12 @@
 'use client';
 import { useState, useEffect } from 'react';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Navigation() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,10 +17,10 @@ export default function Navigation() {
     }, []);
 
     const navLinks = [
-        { href: '#problem', label: 'Problem' },
-        { href: '#how-it-works', label: 'How It Works' },
-        { href: '#pricing', label: 'Pricing' },
-        { href: '#contact', label: 'Contact' },
+        { href: '#problem', label: t.nav.problem },
+        { href: '#how-it-works', label: t.nav.howItWorks },
+        { href: '#pricing', label: t.nav.pricing },
+        { href: '#contact', label: t.nav.contact },
     ];
 
     return (
@@ -36,7 +38,7 @@ export default function Navigation() {
                                 Know Your <span className="text-[#D4AF37]">VIP</span>
                             </span>
                             <span className="text-[10px] text-gray-500 leading-none mt-0.5">
-                                Guest Intelligence Platform
+                                {t.nav.tagline}
                             </span>
                         </div>
                     </a>
@@ -58,7 +60,7 @@ export default function Navigation() {
                     <div className="hidden md:flex items-center gap-4">
                         <LanguageSwitcher />
                         <a href="#contact" className="btn btn-primary">
-                            Request Demo
+                            {t.nav.requestDemo}
                         </a>
                     </div>
 
@@ -94,7 +96,7 @@ export default function Navigation() {
                             </a>
                         ))}
                         <a href="#contact" className="btn btn-primary w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
-                            Request Demo
+                            {t.nav.requestDemo}
                         </a>
                     </div>
                 )}

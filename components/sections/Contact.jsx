@@ -1,7 +1,9 @@
 'use client';
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Contact() {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         hotelName: '',
         name: '',
@@ -50,13 +52,14 @@ export default function Contact() {
                 <div className="max-w-2xl mx-auto">
                     {/* Form */}
                     <div className="text-center">
-                        <span className="badge mb-6">Contact Sales</span>
+                        <span className="badge mb-6">{t.contact.badge}</span>
                         <h2 className="font-heading text-3xl md:text-4xl font-semibold mb-6">
-                            Request a{' '}
-                            <span className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4B5] bg-clip-text text-transparent">VIP Demo</span>
+                            {t.contact.title}{' '}
+                            <span className="bg-gradient-to-r from-[#D4AF37] to-[#F4E4B5] bg-clip-text text-transparent">{t.contact.titleHighlight}</span>
+                            {t.contact.titleEnd}
                         </h2>
                         <p className="text-gray-400 text-lg mb-8">
-                            Fill out the form and we'll contact you within 24 hours for a personalized demo.
+                            {t.contact.subtitle}
                         </p>
 
                         {submitted ? (
@@ -67,10 +70,10 @@ export default function Contact() {
                                     </svg>
                                 </div>
                                 <h3 className="font-heading text-xl font-semibold mb-2 text-white">
-                                    Thank you for your interest!
+                                    {t.contact.successTitle}
                                 </h3>
                                 <p className="text-gray-400">
-                                    We'll contact you within 24 hours.
+                                    {t.contact.successMessage}
                                 </p>
                             </div>
                         ) : (
@@ -85,12 +88,12 @@ export default function Contact() {
                                 )}
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Business Name *
+                                        {t.contact.businessName}
                                     </label>
                                     <input
                                         type="text"
                                         className="input"
-                                        placeholder="E.g. The Grand Hotel"
+                                        placeholder={t.contact.businessNamePlaceholder}
                                         required
                                         value={formData.hotelName}
                                         name="hotelName"
@@ -101,12 +104,12 @@ export default function Contact() {
                                 <div className="grid md:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                                            Your Name *
+                                            {t.contact.yourName}
                                         </label>
                                         <input
                                             type="text"
                                             className="input"
-                                            placeholder="Full name"
+                                            placeholder={t.contact.yourNamePlaceholder}
                                             required
                                             value={formData.name}
                                             name="name"
@@ -115,12 +118,12 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                                            Job Title *
+                                            {t.contact.jobTitle}
                                         </label>
                                         <input
                                             type="text"
                                             className="input"
-                                            placeholder="E.g. General Manager"
+                                            placeholder={t.contact.jobTitlePlaceholder}
                                             required
                                             value={formData.role}
                                             name="role"
@@ -132,12 +135,12 @@ export default function Contact() {
                                 <div className="grid md:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                                            Email *
+                                            {t.contact.email}
                                         </label>
                                         <input
                                             type="email"
                                             className="input"
-                                            placeholder="you@hotel.com"
+                                            placeholder={t.contact.emailPlaceholder}
                                             required
                                             value={formData.email}
                                             name="email"
@@ -146,12 +149,12 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium text-gray-300 mb-2">
-                                            Phone
+                                            {t.contact.phone}
                                         </label>
                                         <input
                                             type="tel"
                                             className="input"
-                                            placeholder="+1 555 123 4567"
+                                            placeholder={t.contact.phonePlaceholder}
                                             value={formData.phone}
                                             name="phone"
                                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -161,11 +164,11 @@ export default function Contact() {
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Message (optional)
+                                        {t.contact.message}
                                     </label>
                                     <textarea
                                         className="input min-h-[100px] resize-none"
-                                        placeholder="Tell us about your property or specific needs..."
+                                        placeholder={t.contact.messagePlaceholder}
                                         value={formData.message}
                                         name="message"
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -183,11 +186,11 @@ export default function Contact() {
                                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                             </svg>
-                                            Sending...
+                                            {t.contact.submitting}
                                         </>
                                     ) : (
                                         <>
-                                            Request VIP Demo
+                                            {t.contact.submit}
                                             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                             </svg>
@@ -196,7 +199,7 @@ export default function Contact() {
                                 </button>
 
                                 <p className="text-xs text-gray-500 text-center">
-                                    By submitting you agree to our privacy policy.
+                                    {t.contact.privacyNote}
                                 </p>
                             </form>
                         )}

@@ -54,7 +54,7 @@ export default function Pricing() {
                     <div className="p-8 rounded-2xl bg-gradient-to-br from-[#1E3A8A]/10 to-[#D4AF37]/5 border-2 border-[#D4AF37] relative md:scale-105 md:-my-4">
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                             <span className="px-4 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-[#D4AF37] to-[#F4E4B5] text-black uppercase tracking-wide shadow-lg">
-                                Most Popular
+                                {t.pricingExtra.mostPopular}
                             </span>
                         </div>
 
@@ -141,6 +141,11 @@ export default function Pricing() {
                         <a href="#contact" className="btn btn-secondary w-full">{t.pricing.ctaEnterprise}</a>
                     </div>
                 </div>
+
+                {/* Pricing Note */}
+                <p className="text-center text-gray-500 text-sm mt-8">
+                    {t.pricing.pricingNote}
+                </p>
             </div>
         </section>
     );

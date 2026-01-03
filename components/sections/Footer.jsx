@@ -1,8 +1,9 @@
 'use client';
-import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const { t } = useLanguage();
 
     return (
         <footer className="border-t border-white/10 bg-[#0A0A0F]">
@@ -21,7 +22,7 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="text-gray-500 max-w-sm mb-6">
-                            Identificeer waardevolle gasten vóór aankomst. Gebouwd voor premium hospitality bedrijven die VIP-service serieus nemen.
+                            {t.footer.tagline}
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#D4AF37] hover:border-[#D4AF37]/50 transition-colors">
@@ -39,22 +40,22 @@ export default function Footer() {
 
                     {/* Links */}
                     <div>
-                        <h4 className="font-semibold text-white mb-4">Product</h4>
+                        <h4 className="font-semibold text-white mb-4">{t.footer.productTitle}</h4>
                         <ul className="space-y-3">
-                            <li><a href="#features" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Functies</a></li>
-                            <li><a href="#pricing" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Tarieven</a></li>
-                            <li><a href="#how-it-works" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Hoe Het Werkt</a></li>
-                            <li><a href="#faq" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Veelgestelde Vragen</a></li>
+                            <li><a href="#features" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.features}</a></li>
+                            <li><a href="#pricing" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.pricing}</a></li>
+                            <li><a href="#how-it-works" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.howItWorks}</a></li>
+                            <li><a href="#faq" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.faq}</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-white mb-4">Bedrijf</h4>
+                        <h4 className="font-semibold text-white mb-4">{t.footer.companyTitle}</h4>
                         <ul className="space-y-3">
-                            <li><a href="#about" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Over Ons</a></li>
-                            <li><a href="#contact" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Contact</a></li>
-                            <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Privacybeleid</a></li>
-                            <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">Algemene Voorwaarden</a></li>
+                            <li><a href="#about" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.about}</a></li>
+                            <li><a href="#contact" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.contact}</a></li>
+                            <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.privacy}</a></li>
+                            <li><a href="#" className="text-gray-500 hover:text-[#D4AF37] transition-colors">{t.footer.terms}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,10 +71,10 @@ export default function Footer() {
                         <div className="flex items-center gap-6">
                             <span className="flex items-center gap-2 text-sm text-gray-600">
                                 <span className="w-2 h-2 rounded-full bg-green-500" />
-                                Online
+                                {t.footer.online}
                             </span>
                             <span className="text-sm text-gray-600">
-                                Gemaakt met ♥ in Amsterdam
+                                {t.footer.madeWith}
                             </span>
                         </div>
                     </div>

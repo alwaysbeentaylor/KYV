@@ -22,15 +22,12 @@ export default function FinalCTA() {
                         <span className="text-white font-semibold">{t.finalCta.subtitleBold}</span>
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <div className="flex items-center justify-center">
                         <a href="#contact" className="btn btn-primary text-lg px-10 py-5 group">
                             <span>{t.finalCta.ctaPrimary}</span>
                             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
-                        </a>
-                        <a href="#contact" className="btn btn-ghost text-lg px-10 py-5">
-                            {t.finalCta.ctaSecondary}
                         </a>
                     </div>
                 </div>
